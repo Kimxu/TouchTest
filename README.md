@@ -34,17 +34,17 @@ Android触碰机制的过程整体思想，就是上级传递给下级。上级�
 也没有对自己能否完成这道菜有评估的能力（onInterceptTouchEvent）。
 
 如果实习厨师可以完成任务的情况：
-![](http://ww2.sinaimg.cn/large/006tNc79gw1fantfezx0ij30og05y40g.jpg){: class="img-responsive"}
+![](http://ww2.sinaimg.cn/large/006tNc79gw1fantfezx0ij30og05y40g.jpg)
 实习厨师能做，那么所有事皆大欢喜。
 
 如果实习厨师不能完成任务的情况：
-![](http://ww1.sinaimg.cn/large/006tNc79gw1fanto1w7p8j30oc0aegp3.jpg){: class="img-responsive"}
+![](http://ww1.sinaimg.cn/large/006tNc79gw1fanto1w7p8j30oc0aegp3.jpg)
 
 如果实习厨师不能完成，那么就反馈给他的上一级，上一级在进行是否做的处理，如果最后都不想做，那么就
 反馈给服务员，服务员告诉顾客，这道菜做不了。那么以后再有人需要做菜的时候，服务员就来脾气了，直接告诉
 顾客做不了。
 
-![](http://ww1.sinaimg.cn/large/006tNc79gw1fantkpq418j30o80cyn1c.jpg){: class="img-responsive"}
+![](http://ww1.sinaimg.cn/large/006tNc79gw1fantkpq418j30o80cyn1c.jpg)
 如果实习厨师不能完成，那么就反馈给他的上一级，上一级在进行是否做的处理，最后厨师长把菜做了，以后
 再有菜需要做，厨师长就觉得手下都不行，别耽误时间了，自己做吧。
 
@@ -130,11 +130,11 @@ public boolean dispatchTouchEvent(MotionEvent ev) {
 *super.dispatchTouchEvent(ev)* 进行往下传递。如果直接返回True或者False，就不能往下传递了，
 如果返回True，那么就是在思考，没有往下进行实践传递。
 
-![](http://ww1.sinaimg.cn/large/006tNc79gw1fanu45iog7j30p006smz8.jpg){: class="img-responsive"}
+![](http://ww1.sinaimg.cn/large/006tNc79gw1fanu45iog7j30p006smz8.jpg)
 
 如果返回False，那么就告诉上一级，做不了，不用往下传递实践了，你们上一级进行处理吧。
 
-![](http://ww3.sinaimg.cn/large/006tNc79gw1fanu5sq210j30p808m0vq.jpg){: class="img-responsive"}
+![](http://ww3.sinaimg.cn/large/006tNc79gw1fanu5sq210j30p808m0vq.jpg)
 
 
 - - -
